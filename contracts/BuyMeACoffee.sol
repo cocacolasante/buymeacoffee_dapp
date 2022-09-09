@@ -24,7 +24,11 @@ contract BuyMeACoffee{
         console.log("I am constructed");
     }
 
-    
+    function buyCoffee(uint _amount, address _sender) external {
+        require(_amount >= coffeePrice, "Coffee costs more than that!");
+        
+    }
+
 
 
 }
