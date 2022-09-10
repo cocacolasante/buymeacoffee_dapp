@@ -1,22 +1,46 @@
 import './App.css';
 
+
 function App() {
+
+  const connectWallet = async () => {
+    try{
+      const {ethereum} = window;
+      if(ethereum){
+        
+      }
+
+    }catch(error){
+      console.log(error)
+    }
+  }
+
+  const checkIfWalletIsConnect = async () =>{
+    const {ethereum} = window;
+
+    if(!ethereum){
+      alert("Please install MetaMask")
+      return;
+    } else {
+      console.log("Ethereum Object Found")
+    }
+
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <h1>Buy Me A Coffee</h1>
+      </div>
+    </div>
+      <div>
+        <div>
+          <h4>Buy a coffee here!</h4>
+          <button>Buy coffee</button>
+        </div>
+      </div>
     </div>
   );
 }
