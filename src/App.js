@@ -59,6 +59,7 @@ function App() {
 
         let txn = await CoffeeContract.buyCoffee(message, {value: "2000000000000000000"})
         let receipt = await txn.wait()
+        console.log("Transaction completed")
 
       }
 
@@ -90,7 +91,7 @@ function App() {
         <div>
           <h4>Buy a coffee here!</h4>
           <input onChange={(e)=>setMessage(e.target.value)} type="text" placeholder='Write A Message!' />
-          <button>Buy coffee</button>
+          <button onClick={buyCoffeeFunction} >Buy coffee</button>
         </div>
       </div>
     </div>
